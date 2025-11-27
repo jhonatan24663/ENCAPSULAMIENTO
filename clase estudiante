@@ -1,0 +1,14 @@
+class estudiante:
+    def __init__(self,nombre,edad):
+        self.__nombre=nombre
+        self.__edad=edad
+        self.__notas=[]
+
+    def agregar_nota(self,n):
+        if n>=0:
+            self.__notas.append(n)
+
+    def promedio(self):
+        if len(self.__notas)==0:
+            return 0
+        return sum(self.__notas)/len(self.__notas)
