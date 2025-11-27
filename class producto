@@ -1,0 +1,16 @@
+class producto:
+    def __init__(self,nombre,precio,stock):
+        self.__nombre=nombre
+        self.__precio=precio
+        self.__stock=stock
+
+    def sumar(self,cant):
+        if cant>0:
+            self.__stock+=cant
+
+    def restar(self,cant):
+        if cant>0 and cant<=self.__stock:
+            self.__stock-=cant
+
+    def info(self):
+        return self.__nombre+"-"+str(self.__precio)+"-"+str(self.__stock)
