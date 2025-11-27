@@ -1,0 +1,11 @@
+class circulo:
+    def __init__(self,radio):
+        if radio<0:
+            radio=0
+        self.__radio=radio
+
+    def area(self):
+        return 3.14*(self.__radio*self.__radio)
+
+    def circunf(self):
+        return 2*3.14*self.__radio
