@@ -1,0 +1,11 @@
+class libro:
+    def __init__(self,titulo,autor,anio):
+        self.__titulo=titulo
+        self.__autor=autor
+        self.__anio=anio
+
+    def descripcion(self):
+        return self.__titulo+"-"+self.__autor+"-"+str(self.__anio)
+
+    def clasico(self,actual):
+        return actual-self.__anio>50
