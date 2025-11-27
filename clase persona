@@ -1,12 +1,34 @@
 class persona:
-    def __init__(self, nombre, edad, genero):
-        self.__nombre = nombre
-        self.__edad = edad
-        self.__genero = genero
+    def __init__(self,nombre,edad,genero):
+        self.__nombre=nombre
+        self.__edad=edad
+        self.__genero=genero
 
-    def cambiar_edad(self, nueva):
-        if nueva >= 0:
-            self.__edad = nueva
+    def get_nombre(self):
+        return self.__nombre
 
-    def info(self):
-        return self.__nombre + "-" + str(self.__edad) + "-" + self.__genero
+    def set_nombre(self,x):
+        self.__nombre=x
+
+    def get_edad(self):
+        return self.__edad
+
+    def set_edad(self,x):
+        self.__edad=x
+
+    def get_genero(self):
+        return self.__genero
+
+    def set_genero(self,x):
+        self.__genero=x
+
+    def cambiar_edad(self,x):
+        self.__edad=x
+
+    def mostrar(self):
+        return "nombre:"+self.__nombre+" edad:"+str(self.__edad)+" genero:"+self.__genero
+
+
+    
+
+
