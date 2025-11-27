@@ -1,0 +1,12 @@
+class empleado:
+    def __init__(self,nombre,salario,dep):
+        self.__nombre=nombre
+        self.__salario=salario
+        self.__dep=dep
+
+    def aumentar(self,p):
+        if p>0:
+            self.__salario=self.__salario+(self.__salario*(p/100))
+
+    def info(self):
+        return self.__nombre+"-"+str(self.__salario)+"-"+self.__dep
