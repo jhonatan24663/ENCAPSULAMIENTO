@@ -4,11 +4,23 @@ class estudiante:
         self.__edad=edad
         self.__notas=[]
 
-    def agregar_nota(self,n):
-        if n>=0:
-            self.__notas.append(n)
+    def get_nombre(self):
+        return self.__nombre
+
+    def get_edad(self):
+        return self.__edad
+
+    def get_notas(self):
+        return self.__notas
+
+    def agregar_nota(self,x):
+        self.__notas.append(x)
 
     def promedio(self):
         if len(self.__notas)==0:
             return 0
         return sum(self.__notas)/len(self.__notas)
+
+
+
+    
