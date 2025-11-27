@@ -1,0 +1,17 @@
+class cuentabancaria:
+    def __init__(self,titular,saldo,num):
+        self.__titular=titular
+        self.__saldo=saldo
+        self.__num=num
+
+    def depositar(self,monto):
+        if monto>0:
+            self.__saldo+=monto
+
+    def retirar(self,monto):
+        if monto>0 and monto<=self.__saldo:
+            self.__saldo-=monto
+
+    def info(self):
+        return self.__titular+"-"+str(self.__saldo)+"-"+str(self.__num)
+
