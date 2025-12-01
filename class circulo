@@ -1,11 +1,20 @@
-class circulo:
-    def __init__(self,radio):
-        if radio<0:
-            radio=0
-        self.__radio=radio
+import math
+
+class Circulo:
+    def __init__(self, radio):
+        self.set_radio(radio)
+
+    def set_radio(self, r):
+        if r >= 0:
+            self.__radio = r
+        else:
+            self.__radio = 0
+
+    def get_radio(self):
+        return self.__radio
 
     def area(self):
-        return 3.14*(self.__radio*self.__radio)
+        return math.pi * self.__radio ** 2
 
-    def circunf(self):
-        return 2*3.14*self.__radio
+    def circunferencia(self):
+        return 2 * math.pi * self.__radio
