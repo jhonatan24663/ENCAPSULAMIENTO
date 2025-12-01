@@ -1,12 +1,13 @@
-class empleado:
-    def __init__(self,nombre,salario,dep):
-        self.__nombre=nombre
-        self.__salario=salario
-        self.__dep=dep
+class Empleado:
+    def __init__(self, nombre, salario, departamento):
+        self.__nombre = nombre
+        self.__salario = salario
+        self.__departamento = departamento
 
-    def aumentar(self,p):
-        if p>0:
-            self.__salario=self.__salario+(self.__salario*(p/100))
+    def aumentar_salario(self, porcentaje):
+        if porcentaje > 0:
+            self.__salario += self.__salario * (porcentaje / 100)
 
-    def info(self):
-        return self.__nombre+"-"+str(self.__salario)+"-"+self.__dep
+    def mostrar_info(self):
+        return f"{self.__nombre} | Salario: ${self.__salario} | Depto: {self.__departamento}"
+
