@@ -1,34 +1,16 @@
-class persona:
-    def __init__(self,nombre,edad,genero):
-        self.__nombre=nombre
-        self.__edad=edad
-        self.__genero=genero
+class Persona:
+    def __init__(self, nombre, edad, genreo):
+        self.__nombre = nombre
+        self.__edad = edad
+        self.__genreo = genreo
 
-    def get_nombre(self):
-        return self.__nombre
-
-    def set_nombre(self,x):
-        self.__nombre=x
-
+    # Getter y Setter
     def get_edad(self):
         return self.__edad
 
-    def set_edad(self,x):
-        self.__edad=x
+    def set_edad(self, nueva_edad):
+        if nueva_edad >= 0:
+            self.__edad = nueva_edad
 
-    def get_genero(self):
-        return self.__genero
-
-    def set_genero(self,x):
-        self.__genero=x
-
-    def cambiar_edad(self,x):
-        self.__edad=x
-
-    def mostrar(self):
-        return "nombre:"+self.__nombre+" edad:"+str(self.__edad)+" genero:"+self.__genero
-
-
-    
-
-
+    def mostrar_info(self):
+        return f"Persona: {self.__nombre}, {self.__edad} años, genreo: {self.__genreo}"
