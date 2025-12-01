@@ -1,21 +1,11 @@
-class libro:
-def __init__(self,titulo,autor,año):
-self.__titulo=titulo
-self.__autor=autor
-self.__año=año
+class Libro:
+    def __init__(self, titulo, autor, año_publicacion):
+        self.__titulo = titulo
+        self.__autor = autor
+        self.__año_publicacion = año_publicacion
 
-def get_titulo(self):
-return self.__titulo
+    def descripcion(self):
+        return f"'{self.__titulo}' de {self.__autor} ({self.__año_publicacion})"
 
-def get_autor(self):
-return self.__autor
-
-def get_año(self):
-return self.__año
-
-def descripcion(self):
-return "titulo:"+self.__titulo+" autor:"+self.__autor+" año:"+str(self.__año)
-
-def es_clasico(self,actual):
-return actual-self.__año
->50
+    def es_clasico(self):
+        return 2025 - self.__año_publicacion > 50
