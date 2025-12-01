@@ -4,7 +4,7 @@ class Persona:
         self.__edad = edad
         self.__genreo = genreo
 
-    # Getter y Setter
+
     def get_edad(self):
         return self.__edad
 
