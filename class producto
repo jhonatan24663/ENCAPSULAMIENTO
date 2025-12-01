@@ -1,16 +1,17 @@
-class producto:
-    def __init__(self,nombre,precio,stock):
-        self.__nombre=nombre
-        self.__precio=precio
-        self.__stock=stock
+class Producto:
+    def __init__(self, nombre, precio, stock):
+        self.__nombre = nombre
+        self.__precio = precio
+        self.__stock = stock
 
-    def sumar(self,cant):
-        if cant>0:
-            self.__stock+=cant
+    def aumentar_stock(self, cantidad):
+        if cantidad > 0:
+            self.__stock += cantidad
 
-    def restar(self,cant):
-        if cant>0 and cant<=self.__stock:
-            self.__stock-=cant
+    def disminuir_stock(self, cantidad):
+        if 0 < cantidad <= self.__stock:
+            self.__stock -= cantidad
 
     def info(self):
-        return self.__nombre+"-"+str(self.__precio)+"-"+str(self.__stock)
+        return f"{self.__nombre} | Precio: ${self.__precio} | Stock: {self.__stock}"
+
